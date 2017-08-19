@@ -1,9 +1,29 @@
-# Welcome!
+# Java 9 - Implementing Services
 
-This Java template lets you get started quickly with a simple working example using Maven and JUnit. If it is your first contribution then you should have a look at the [Getting Started](https://tech.io/doc/getting-started-create-playground) document.
+# What is Service?
 
+A specific functionality provided by the library is known as service. Let us consider an example to describe in detail, we can have different libraries providing the a number check service , which can check whether the given number is valid or not and also odd or even, etc., Applications and library providing an implementations for a service are called as service providers. Applications using this service are called as service consumers or clients.
 
-The source code is on [GitHub](https://github.com/TechDotIO/java-template), please feel free to come up with proposals to improve it.
+In java, a service is defined by a set of interfaces and classes. The service contains an interface or an abstract class that defines the functionality provided by the service.
+
+There are multiple implementations for a service and they are called as service providers. The client using this service will not have any contact with the implementations. This can be achieved by using the below concept.
+
+The java.util.ServiceLoader<S> class in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
+
+This architecture follows plugin mechanism in which the service providers can be added or removed without affecting the service interface and the consumers.
+
+Discovering Service:
+The java.util.ServiceLoader class is used to discover and load all the service providers.The module which discover and load all the service providers should contain the uses statement in module descriptor file.
+Uses <service-interface>
+In our example, we have the service “AdminService” which is the service interface loads and discovers the service providers.
+
+``` java
+module com.gg.admin{
+	exports com.gg.service;
+	 uses com.gg.service.AdminService;
+}
+
+```
 
 # Hands-on Demo
 
