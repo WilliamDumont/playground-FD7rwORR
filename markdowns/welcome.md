@@ -8,7 +8,7 @@ In java, a service is defined by a set of interfaces and classes. The service co
 
 There are multiple implementations for a service and they are called as service providers. The client using this service will not have any contact with the implementations. This can be achieved by using the below concept.
 
-The ServiceLoader<S> class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
+The ServiceLoader class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
 
 This architecture follows plugin mechanism in which the service providers can be added or removed without affecting the service interface and the consumers.
 
