@@ -55,7 +55,7 @@ public interface AdminService {
 
 The module which provide the implementation for the service interface should contain provides statement in module descriptor file. If the module doesn’t have the provides statement in the module descriptor file, the service loader will not load that module. The provides statement is used to indicate the service loader, that “I’m providing the implementation for the service”.
 
- ** Provides <service-interface> with <service-implementation>
+ <B> Provides \<service-interface> with \<service-implementation> </B>
 
 ``` java
 
