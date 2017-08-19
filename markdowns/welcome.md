@@ -19,7 +19,7 @@ This architecture follows plugin mechanism in which the service providers can be
 
 The java.util.ServiceLoader class is used to discover and load all the service providers.The module which discover and load all the service providers should contain the uses statement in module descriptor file.
 
-<B> Uses \<service-interface>  </B>
+<B> uses \<service-interface>  </B>
 
 In our example, we have the service “AdminService” which is the service interface loads and discovers the service providers.
 
@@ -55,7 +55,7 @@ public interface AdminService {
 
 The module which provide the implementation for the service interface should contain provides statement in module descriptor file. If the module doesn’t have the provides statement in the module descriptor file, the service loader will not load that module. The provides statement is used to indicate the service loader, that “I’m providing the implementation for the service”.
 
- <B> Provides \<service-interface> with \<service-implementation> </B>
+ <B> provides \<service-interface> with \<service-implementation> </B>
 
 ``` java
 
