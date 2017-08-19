@@ -96,7 +96,7 @@ public class CarrierAdminServiceImpl implements AdminService{
 In above sample, we have created only one service providers.In real time , we can have n number of providers who are providing the implementations for a service.
 
 # Service Consumer (Client)
-
+The below diagram explains the class diagram design of our example.
 ![Service Concept Diagram](https://github.com/GowthamGirithar/playground-FD7rwORR/blob/master/serviceexample.PNG "Service Implementation")
 
 @[Service ]({"stubs": ["src/com.gg.admin.client/com/gg/client/Client.java"], "command": "/bin/bash run.sh"})
