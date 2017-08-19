@@ -10,7 +10,7 @@ There are multiple implementations for a service and they are called as service 
 
 The ServiceLoader class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
 
-![alt text](https://github.com/GowthamGirithar/playground-FD7rwORR/service.png "service concept diagram")
+![alt text](https://github.com/GowthamGirithar/playground-FD7rwORR/service.PNG "service concept diagram")
 
 
 This architecture follows plugin mechanism in which the service providers can be added or removed without affecting the service interface and the consumers.
