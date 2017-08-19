@@ -58,7 +58,6 @@ The module which provide the implementation for the service interface should con
 
  module com.gg.admin.impl{
 	 requires transitive com.gg.admin;
-	 exports com.gg.serviceimpl;
 	 provides com.gg.service.AdminService with com.gg.serviceimpl.CarrierAdminServiceImpl;
 }
 
@@ -90,6 +89,7 @@ public class CarrierAdminServiceImpl implements AdminService{
 2.	It should have no-argument constructor. The ServiceLoader class uses this constructor to instantiate the service provider using reflection.
 3.	An instance of the implementation class must be compatible with the service interface.
 
+In above sample, we have created only one service providers.In real time , we can have n number of providers who are providing the implementations for a service.
 
 # Hands-on Demo
 
