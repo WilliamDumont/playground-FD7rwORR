@@ -15,7 +15,9 @@ This architecture follows plugin mechanism in which the service providers can be
 # Discovering Service:
 
 The java.util.ServiceLoader class is used to discover and load all the service providers.The module which discover and load all the service providers should contain the uses statement in module descriptor file.
-Uses <service-interface>
+
+<B>Uses <service-interface></B>
+
 In our example, we have the service “AdminService” which is the service interface loads and discovers the service providers.
 
 ``` java
@@ -44,6 +46,43 @@ public interface AdminService {
 		
 	}
 }
+```
+
+# Service Provider:
+
+The module which provide the implementation for the service interface should contain provides statement in module descriptor file. If the module doesn’t have the provides statement in the module descriptor file, the service loader will not load that module. The provides statement is used to indicate the service loader, that “I’m providing the implementation for the service”.
+
+<B>Provides <service-interface> with <service-implementation></B>
+
+``` java
+
+ module com.gg.admin.impl{
+	 requires transitive com.gg.admin;
+	 exports com.gg.serviceimpl;
+	 provides com.gg.service.AdminService with com.gg.serviceimpl.CarrierAdminServiceImpl;
+}
+
+
+
+```
+
+The sample implemenatation class is provided below,
+
+``` java
+package com.gg.serviceimpl;
+
+import com.gg.service.AdminService;
+
+public class CarrierAdminServiceImpl implements AdminService{
+	
+	public CarrierAdminServiceImpl(){
+	}
+	public void printServiceInfo(){
+		System.out.println("CarrierAdminServiceImpl Implementation");
+	}
+	
+}
+
 ```
 
 
