@@ -12,7 +12,8 @@ The ServiceLoader class (java.util) in JDK is responsible for discovering and lo
 
 This architecture follows plugin mechanism in which the service providers can be added or removed without affecting the service interface and the consumers.
 
-Discovering Service:
+# Discovering Service:
+
 The java.util.ServiceLoader class is used to discover and load all the service providers.The module which discover and load all the service providers should contain the uses statement in module descriptor file.
 Uses <service-interface>
 In our example, we have the service “AdminService” which is the service interface loads and discovers the service providers.
