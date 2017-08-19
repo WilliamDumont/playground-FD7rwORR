@@ -10,7 +10,7 @@ There are multiple implementations for a service and they are called as service 
 
 The ServiceLoader class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
 
-![alt text](https://github.com/GowthamGirithar/playground-FD7rwORR/service.PNG "service concept diagram")
+![Service Concept Diagram](https://github.com/GowthamGirithar/playground-FD7rwORR/service.PNG)
 
 
 This architecture follows plugin mechanism in which the service providers can be added or removed without affecting the service interface and the consumers.
@@ -97,8 +97,6 @@ In above sample, we have created only one service providers.In real time , we ca
 # Service Consumer (Client)
 
 @[Service ]({"stubs": ["src/com.gg.admin.client/com/gg/client/Client.java"], "command": "/bin/bash run.sh"})
-
-Check out the markdown file [`welcome.md`](https://github.com/TechDotIO/java-template/blob/master/markdowns/welcome.md) to see how this exercise is injected into the template.
 
 The above examples describe the service implemenation in Java 9.
 
