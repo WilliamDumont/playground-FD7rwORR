@@ -24,6 +24,28 @@ module com.gg.admin{
 }
 
 ```
+The service coding is described below ,
+``` java
+package com.gg.service;
+
+import java.util.ServiceLoader;
+
+public interface AdminService {
+	
+	public void printServiceInfo();
+	
+	public static AdminService newInstance(){
+		ServiceLoader<AdminService> service=ServiceLoader.load(AdminService.class);
+		for(AdminService inter:service){
+			return inter;
+		}
+		return null;
+		
+	}
+}
+```
+
+
 
 # Hands-on Demo
 
