@@ -2,10 +2,10 @@ package com.gg.service;
 import java.util.ServiceLoader;
 public interface AdminService {
 	public void printServiceInfo();
-	public static FInterface newInstance(){
-		ServiceLoader<FInterface> service=ServiceLoader.load(FInterface.class);
+	public static AdminService newInstance(){
+		ServiceLoader<AdminService> service=ServiceLoader.load(AdminService.class);
 		//service.forEach(s-> {return (FInterface)s;});
-		for(FInterface inter:service){
+		for(AdminService inter:service){
 			return inter;
 		}
 		return null;
