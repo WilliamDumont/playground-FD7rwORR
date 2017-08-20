@@ -8,7 +8,7 @@ In Java, a service is defined by a set of interfaces and classes. The service co
 
 There are multiple implementations for a service and they are called as service providers. The client using this service will not have any contact with the implementations. This can be achieved by using the below concept.
 
-The ServiceLoader class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
+The ServiceLoader\<S> class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
 
 ![Service Concept Diagram](Servicesample.PNG)
 
@@ -97,7 +97,7 @@ In above sample, we have created only one service providers.In real time , we ca
 
 # Service Consumer (Client)
 The below diagram explains the class diagram design of our example.
-![Service Concept Diagram](https://github.com/GowthamGirithar/playground-FD7rwORR/blob/master/serviceexample.PNG "Service Implementation")
+![Service Concept Diagram](serviceexample.PNG)
 
 @[Service ]({"stubs": ["src/com.gg.admin.client/com/gg/client/Client.java"], "command": "/bin/bash run.sh"})
 
