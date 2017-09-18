@@ -4,11 +4,7 @@
 
 A specific functionality provided by the library is known as service. Let us consider an example to describe in detail, we can have different libraries providing a number check service , which can check whether the given number is valid or not , odd or even , etc., Applications and library providing an implementations for a service are called as service providers. Applications using this service are called as service consumers or clients.
 
-In Java, a service is defined by a set of interfaces and classes. The service contains an interface or an abstract class that defines the functionality provided by the service.
-
-There are multiple implementations for a service and they are called as service providers. The client using this service will not have any contact with the implementations. This can be achieved by using the below concept.
-
-The ServiceLoader\<S> class (java.util) in JDK is responsible for discovering and loading all the service providers at a runtime for a service interface of type S. The ServiceLoader class allows decoupling between the providers and consumers. The consumer which is client knows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
+In Java, a service is defined by a set of interfaces and classes. The serviknows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
 
 ![Service Concept Diagram](Servicesample.PNG)
 
