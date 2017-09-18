@@ -2,9 +2,7 @@
 
 # What is Service?
 
-A specific functionality provided by the library is known as service. Let us consider an example to describe in detail, we can have different libraries providing a number check service , which can check whether the given number is valid or not , odd or even , etc., Applications and library providing an implementations for a service are called as service providers. Applications using this service are called as service consumers or clients.
 
-In Java, a service is defined by a set of interfaces and classes. The serviknows only about the service interface. The service loader will instantiate all the service providers that are implementing the service and makes it available to the consumer to use.
 
 ![Service Concept Diagram](Servicesample.PNG)
 
